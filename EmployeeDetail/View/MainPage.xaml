@@ -2,7 +2,7 @@
 <ContentPage Title="Employees" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EmployeeDetail" x:Class="EmployeeDetail.MainPage">
     <StackLayout Padding="20">
         <StackLayout>
-            <Button Text="Add" HorizontalOptions="EndAndExpand"/>
+            <Button Text="Add" HorizontalOptions="EndAndExpand" Clicked="ClickedAddEmployee"/>
         </StackLayout>
         <ListView ItemsSource="{Binding Employees}" 
                   ItemSelected="Handle_ItemSelected">

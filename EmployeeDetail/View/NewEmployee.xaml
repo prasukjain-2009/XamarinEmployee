@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EmployeeDetail.View.NewEmployee">
+<ContentPage Title="New Employee Details" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="EmployeeDetail.NewEmployee"
+             
+             xmlns:Controls="clr-namespace:EmployeeDetail"
+             >
     <ContentPage.Content>
         <StackLayout Padding="20">
+            <StackLayout>
+            <Button Text="Add" HorizontalOptions="EndAndExpand" Clicked="ClickedAddEmployee"/>
+        </StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="5" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="5" />
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="5" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <!--Border                -->
-                <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
-                <BoxView Grid.Row="3" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
-                <BoxView Grid.Row="5" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
-                <BoxView Grid.Row="7" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <BoxView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray" Margin="2,2,2,2" />
                 <!--                -->
+                <Controls:BorderlessEntry Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" AutomationId="EntryFirstName" x:Name="EntryFirstName" Text="{Binding Mode=TwoWay, Path=FirstName}" Placeholder="FirstName" />
+                <Controls:BorderlessEntry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" AutomationId="EntryLastName" x:Name="EntryLarstName" Text="{Binding Mode=TwoWay, Path=LastName}" Placeholder="LastName" />
+                <!--                -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Email" AutomationId="LabelTextEmail" HorizontalOptions="StartAndExpand" />
+                    <Controls:BorderlessEntry Grid.Row="3" Grid.Column="1" Text="{Binding Email}" Placeholder="123@abc.com" AutomationId="EntryEmail" DisableLayout="true"/>
                 
+                
+<!--                <StackLayout Grid.Column="0" Grid.Row="4" Orientation="Horizontal" VerticalOptions="Center" StyleClass="EmployeeDetailsColumn">-->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Age" AutomationId="LabelTextAge" HorizontalOptions="StartAndExpand"  />
+                    <Controls:BorderlessEntry Grid.Row="4" Grid.Column="1" Text="{Binding Age}" Placeholder="Between 20 and 62" AutomationId="EntryAge"/>
+
+<!--                </StackLayout>-->
+                
+<!--                <StackLayout Grid.Column="0" Grid.Row="5" Orientation="Horizontal" VerticalOptions="Center" StyleClass="EmployeeDetailsColumn">-->
+                    <Label Grid.Row="5" Grid.Column="0" Text="Date of joining" AutomationId="LabelTextAge" HorizontalOptions="StartAndExpand" />
+                    <DatePicker Grid.Row="5" Grid.Column="1" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}" Format="MMMM dd, yyyy" Date="{Binding Path=DataOfJoining}" AutomationId="DPDateOfJoining"/>
+<!--                </StackLayout>-->
             </Grid>
         </StackLayout>
     </ContentPage.Content>

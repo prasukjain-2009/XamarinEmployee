@@ -8,12 +8,12 @@ namespace EmployeeDetail.ViewModel
     public ObservableCollection<Employee> Employees { get; set; }
     public MainPageViewModel()
         {
-            Employees = new ObservableCollection<Employee>();
             PopulateEmployees();
+            Employees = Model.PopulateEmployees.Employees;
         }
         public async void PopulateEmployees()
         {
-            await Model.PopulateEmployees.Populate(10, Employees);
+            await Model.PopulateEmployees.Populate(10);
 
         }
     }

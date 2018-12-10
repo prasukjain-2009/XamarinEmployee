@@ -6,6 +6,8 @@ namespace EmployeeDetail.Model
 {
     public static class PopulateEmployees
     {
+
+        public static ObservableCollection<Employee> Employees = new ObservableCollection<Employee>();
         private static Random random = new Random();
         private static string[] FNDict = new string[] {"Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James", "Aarron", "Aaryan", "Aaryn", "Aayan", "Aazaan",
         "Abaan", "Abbas", "Abdallah", "Abdalroof", "Abdihakim", "Abdirahman", "Abdisalam", "Abdul", "Abdul-Aziz", "Abdulbasir", "Abdulkadir", "Abdulkarem",
@@ -110,7 +112,7 @@ namespace EmployeeDetail.Model
   "Welch","Wells","West","Wheeler","Whitaker","White","Whitehead","Whitfield","Whitley","Whitney","Wiggins","Wilcox","Wilder","Wiley","Wilkerson","Wilkins","Wilkinson","William","Williams","Williamson","Willis",
   "Wilson","Winters","Wise","Witt","Wolf","Wolfe","Wong","Wood","Woodard","Woods","Woodward","Wooten","Workman","Wright","Wyatt","Wynn","Yang","Yates","York","Young","Zamora","Zimmerman"};
 
-        private static readonly int lNArrayLen =LNDict.Length;
+        private static readonly int lNArrayLen = LNDict.Length;
         private static string[] mails = new string[] {"aol.com", "att.net", "comcast.net", "facebook.com", "gmail.com", "gmx.com", "googlemail.com",
   "google.com", "hotmail.com", "hotmail.co.uk", "mac.com", "me.com", "mail.com", "msn.com",
   "live.com", "sbcglobal.net", "verizon.net", "yahoo.com", "yahoo.co.uk",
@@ -120,10 +122,10 @@ namespace EmployeeDetail.Model
   "iname.com", "inbox.com", "lavabit.com", "love.com" /* AOL */, "outlook.com", "pobox.com", "protonmail.com",
   "rocketmail.com" /* Yahoo */, "safe-mail.net", "wow.com" /* AOL */, "ygm.com" /* AOL */,
   "ymail.com" /* Yahoo */, "zoho.com", "yandex.com"};
-
+        private static ObservableCollection<Employee> s_employees;
         private static readonly int mailLength = mails.Length;
 
-        public static Task Populate(int num, ObservableCollection<Employee> emps)
+        public static Task Populate(int num)
         {
             Employee employee;
             return Task.Run(() =>
@@ -131,7 +133,7 @@ namespace EmployeeDetail.Model
                 for (int i = 0; i < num; i++)
                 {
                     employee = CreateRandomEmployee();
-                    emps.Add(employee);
+                    AddEmployee(employee);
                 }
             });
 
@@ -152,5 +154,7 @@ namespace EmployeeDetail.Model
             employee = new Employee(fN, lN, age, em, new DateTime(yearOB, monthOB, dateOB));
             return employee;
         }
+
+        public static void AddEmployee(Employee employee) => Employees.Add(employee);
     }
 }

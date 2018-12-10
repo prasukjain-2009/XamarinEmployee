@@ -29,5 +29,9 @@ namespace EmployeeDetail.Model
         {
 
         }
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}, {Age}, {Email}, {DOJString}";
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace EmployeeDetail
         {
             Navigation.PushAsync(new EmployeeDetails((Employee)e.SelectedItem));
         }
+
+        void ClickedAddEmployee(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new NewEmployee());
+        }
     }
 }

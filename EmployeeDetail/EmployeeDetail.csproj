@@ -21,5 +21,6 @@
   <ItemGroup>
     <Compile Remove="Model\EmployeeCollection.cs" />
     <Compile Remove="View\EmployeeDetails.cs" />
+    <Compile Remove="View\EmptyClass.cs" />
   </ItemGroup>
 </Project>
