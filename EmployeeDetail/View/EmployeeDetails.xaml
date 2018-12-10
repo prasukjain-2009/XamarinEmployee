@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="{Binding FirstName, StringFormat='{0} Details'}"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EmployeeDetail.EmployeeDetails">
+    
+    <ContentPage.Content>
+       
+        <StackLayout Padding="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!--Border                -->
+                <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <BoxView Grid.Row="3" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <BoxView Grid.Row="5" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <BoxView Grid.Row="7" Grid.Column="0" BackgroundColor="Gray" Margin="2,2,2,2" />
+                <!--                -->
+                <StackLayout x:Name="Heading" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Padding="5" >
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label Text="{Binding FirstName}" />
+                        <Label Text="{Binding LastName}" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Horizontal" VerticalOptions="Center" StyleClass="EmployeeDetailsColumn"  >
+                    <Label Text="Email" AutomationId="LabelTextEmail" HorizontalOptions="StartAndExpand" />
+                    <Label Text="{Binding Email}" AutomationId="LabelEmail" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="4" Orientation="Horizontal" VerticalOptions="Center" StyleClass="EmployeeDetailsColumn" >
+                    <Label Text="Age" AutomationId="LabelTextAge" HorizontalOptions="StartAndExpand" />
+                    <Label Text="{Binding Age}" AutomationId="LabelAge" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="6" Orientation="Horizontal" VerticalOptions="Center" StyleClass="EmployeeDetailsColumn"  >
+                    <Label Text="DateOfJoining" AutomationId="LabelTextDOJ" HorizontalOptions="StartAndExpand" />
+                    <Label Text="{Binding DOJString}" AutomationId="LabelDOJ" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

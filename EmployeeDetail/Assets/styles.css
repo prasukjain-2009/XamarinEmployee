@@ -1,0 +1,11 @@
+﻿#Heading{
+    font-size: 25;
+    align-self:center;
+    border: 0 0 1 1;
+    border-color:black;
+}
+.EmployeeDetailsColumn{
+    font-size:20;
+    padding:5;
+    height:40;
+}
