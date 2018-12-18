@@ -73,15 +73,15 @@ namespace EmployeeDetail.ViewModel
             DataOfJoining = DateTime.Now;
         }
 
-        internal string AddEmployee()
+        internal bool AddEmployee()
         {
             if (ValidateInput())
             {
                 Employee employee = new Employee(FirstName, LastName, age, Email, DataOfJoining);
                 PopulateEmployees.AddEmployee(employee);
-                //return employee.ToString();
+                return true;
             }
-            return $"{FirstName},{LastName},{Age},{DataOfJoining.ToLongDateString()},{ValidateInput()}";
+            return false;
         }
 
         private bool ValidateInput()
@@ -94,7 +94,8 @@ namespace EmployeeDetail.ViewModel
             if (emailSplit.Length !=2 || string.IsNullOrEmpty(emailSplit[0]) || string.IsNullOrEmpty(emailSplit[1])) return false;
             var suffixSplit = emailSplit[1].Split('.');
             if (suffixSplit.Length < 2) return false;
-            return true;
+            if ((((DateTime.Now - DataOfJoining).TotalDays) / 365) > (age - 20)) return false;
+             return true;
         }
     }
 }

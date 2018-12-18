@@ -6,11 +6,13 @@
              
              xmlns:Controls="clr-namespace:EmployeeDetail"
              >
+             
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="ClickedAddEmployee">
+            </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <StackLayout>
-            <Button Text="Add" HorizontalOptions="EndAndExpand" Clicked="ClickedAddEmployee"/>
-        </StackLayout>
+        <StackLayout Padding="10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />

@@ -18,8 +18,12 @@ namespace EmployeeDetail
         void ClickedAddEmployee(object sender, System.EventArgs e)
         {
             //DisplayAlert("GHello", vm.AddEmployee().ToString(), "ye");
-            vm.AddEmployee();
-            Navigation.PopAsync();
+            if (vm.AddEmployee())
+            {
+                DisplayAlert("Success", "Employee Added Successfully!", "OK");
+                Navigation.PopAsync();
+            }
+            else DisplayAlert("Failed", "Pleased check the employee details", "OK");
         }            
     }
 }

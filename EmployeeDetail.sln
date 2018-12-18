@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDetail.iOS", "Emplo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDetail", "EmployeeDetail\EmployeeDetail.csproj", "{0ADA5E64-9F93-4D48-938C-B3FE51227129}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSTest", "iOSTest\iOSTest.csproj", "{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -49,5 +51,21 @@ Global
 		{0ADA5E64-9F93-4D48-938C-B3FE51227129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ADA5E64-9F93-4D48-938C-B3FE51227129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ADA5E64-9F93-4D48-938C-B3FE51227129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|iPhone.Build.0 = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C88C4C-9B1B-4801-BCCC-5177D0FF7C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
